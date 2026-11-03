@@ -19,16 +19,35 @@ CampusFlow helps students plan, manage, and collaborate on hackathons, capstone 
 - Dedicated Hackathon & Capstone modes
 - GitHub contribution tracking
 
+### Architecture
+
+```text
+client/       React + Vite frontend
+server/       Express API, MongoDB, Cloudinary integrations
+shared/       TypeScript contracts shared by client and server
+```
+
+The API is organized around `config`, `middleware`, `models`, `routes`, `controllers`,
+and `services`. Add feature modules under `server/src/modules/<feature>` as the
+application grows. Keep request/response types in `shared/src`.
+
 ### Getting Started
 
 ```bash
-git clone <repository-url>
-cd CampusFlow
-cd client && npm install
-cd ../server && npm install
+npm install
+Copy-Item .env.example .env
+npm run dev
 ```
 
-Configure environment variables in the backend `.env` file and start both development servers.
+Fill in the MongoDB and Cloudinary values in `.env` before starting the API.
+The frontend runs at `http://localhost:5173`; the API runs at `http://localhost:5000`.
+
+### Useful commands
+
+```bash
+npm run typecheck
+npm run build
+```
 
 ### Contributors
 
