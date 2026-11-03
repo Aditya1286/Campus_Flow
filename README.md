@@ -24,13 +24,19 @@ CampusFlow helps students plan, manage, and collaborate on hackathons, capstone 
 ```bash
 git clone <repository-url>
 cd CampusFlow
-
-# Install dependencies
 cd client && npm install
 cd ../server && npm install
 ```
 
 Configure environment variables in the backend `.env` file and start both development servers.
+
+### Contributors
+
+| Name | Role |
+|---|---|
+| Aditya Aishwarya | Backend Developer |
+| Yogesh Dubey | DevOps Engineer |
+| Harshit Mohanty | Software Tester |
 
 ---
 
